@@ -79,3 +79,54 @@ $share-grey: #e8eaec;
   width: 100px;
   margin: govuk-spacing(2) 0;
 }
+
+.countdown {
+  margin-bottom: govuk-spacing(4);
+  text-align: center;
+}
+
+.countdown__wrapper {
+  display: inline-block;
+  background: govuk-colour("white");
+}
+
+.countdown__title {
+  @include govuk-font($size: 24, $weight: bold);
+  position: relative;
+  padding: .4em;
+  background: govuk-colour("red");
+  color: govuk-colour("white");
+  text-transform: uppercase;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 15%;
+    height: 16px;
+    width: 10px;
+    margin-left: -5px;
+    background: govuk-colour("blue");
+    box-shadow: 0 0 0 2px govuk-colour("white");
+  }
+
+  &:after {
+    left: 85%;
+  }
+}
+
+.countdown__content {
+  @include govuk-font($size: 24);
+  padding: 0 1em 0.2em 1em;
+  border: solid 2px govuk-colour("blue");
+  border-top: 0;
+  color: govuk-colour("blue");
+}
+
+.countdown__number {
+  @include govuk-font($size: 80, $weight: bold);
+  display: block;
+  margin-bottom: -10px;
+}
+
