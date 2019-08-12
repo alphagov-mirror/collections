@@ -25,18 +25,18 @@
         </div>
 
         <div class="govuk-grid-column-one-half">
-          <% daystobrexit = (Date.parse("31/10/2019") - Date.today).to_i %>
-          <% if daystobrexit > -1 %>
+          <% if presented_taxon.show_countdown? %>
             <aside class="countdown">
               <div class="countdown__wrapper">
                 <div class="countdown__title">Brexit</div>
                 <div class="countdown__content">
-                  <span class="countdown__number"><%= daystobrexit %></span> days to go
+                  <span class="countdown__number"><%= presented_taxon.days_left %></span> <%= presented_taxon.days_text %> to go
                 </div>
               </div>
             </aside>
           <% end %>
         </div>
+
       </div>
     </div>
   </div>
