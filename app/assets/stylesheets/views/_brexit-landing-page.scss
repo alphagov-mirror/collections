@@ -1,3 +1,6 @@
+$ready-grey: #f1f2f3;
+$share-grey: #e8eaec;
+
 .large-paragraph {
   @include govuk-font($size: 19, $weight: bold);
 }
@@ -27,12 +30,17 @@
   }
 }
 
-$ready-grey: #f1f2f3;
-$share-grey: #e8eaec;
-
 .landing-page__ready {
   padding: govuk-spacing(8) 0;
   background-color: $ready-grey;
+}
+
+.landing-page__ready-countdown {
+  padding-top: govuk-spacing(8);
+
+  @include govuk-media-query($from: tablet) {
+    padding: 0;
+  }
 }
 
 .landing-page__share {
@@ -108,7 +116,7 @@ $share-grey: #e8eaec;
     width: 10px;
     margin-left: -5px;
     background: govuk-colour("blue");
-    box-shadow: 0 0 0 2px govuk-colour("white");
+    box-shadow: 0 0 0 2px $ready-grey;
   }
 
   &:after {
