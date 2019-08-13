@@ -37,6 +37,12 @@ module BrexitLandingPageSteps
     visit brexit_taxon_path
   end
 
+  def when_i_visit_the_brexit_landing_page_at_this_time(time)
+    Timecop.freeze(time) do
+      visit brexit_taxon_path
+    end
+  end
+
   def and_the_taxon_has_tagged_content
     # We still need to stub tagged content because it is used by the sub-topic grid
     stub_content_for_taxon(content_id, tagged_content)
@@ -68,6 +74,18 @@ module BrexitLandingPageSteps
 
   def then_i_can_see_the_get_ready_section
     assert page.has_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
+  end
+
+  def then_i_can_see_the_countdown_to(days)
+    assert page.has_selector?('.countdown__number', text: days)
+    days_text = days == 1 ? 'day ' : 'days'
+    if days > -1
+      assert page.has_selector?('.countdown__content', text: /#{days_text}/)
+    end
+  end
+
+  def then_i_cannot_see_the_countdown
+    assert page.has_no_selector?('.countdown')
   end
 
   def then_i_can_see_the_share_links_section
