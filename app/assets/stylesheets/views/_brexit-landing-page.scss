@@ -24,11 +24,11 @@ p.landing-page__header-text {
   color: govuk-colour("white");
 }
 
-// scss-lint:disable QualifyingElement
 hr.landing-page__divider {
   outline: 0;
   border: 1px solid govuk-colour("white");
 }
+// scss-lint:enable QualifyingElement
 
 .landing-page__contents {
   margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
