@@ -100,18 +100,7 @@ module BrexitLandingPageSteps
     assert page.has_css?(".landing-page__section[data-search-query]")
   end
 
-  def then_all_finder_links_have_tracking_data
-    [
-      "Services", "Guidance and regulation", "News and communications",
-      "Research and statistics", "Policy papers and consultations",
-      "Transparency and freedom of information releases"
-    ].each do |section|
-      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
-      assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)
-    end
-  end
-
-  def and_the_start_button_is_tracked
+  def then_the_start_button_is_tracked
     assert page.has_selector?("a[data-track-category='startButtonClicked']")
     assert page.has_selector?("a[data-track-label='Check what you need to do if there is no deal']")
     assert page.has_selector?("a[data-track-action='/get-ready-brexit-check']")
