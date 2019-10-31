@@ -7,9 +7,12 @@ cy:
     meta_title: "Byddwch yn barod am Brexit"
     meta_description: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE. Darganfyddwch beth mae hyn yn ei olygu i chi."
     page_title: "Byddwch yn barod am Brexit"
-    page_lead: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE."
-    page_paragraph: "Bydd angen i’r DU a’r UE gymeradwyo ac arwyddo’r cytundeb ymadael."
-    page_warning: "Os nad ydy’r cytundeb ymadael wedi ei arwyddo gan y DU a’r UE, gall y DU ymadael heb gytundeb. Darganfyddwch beth ddylech chi, eich teulu neu’ch busnes wneud os yw’r DU yn gadael yr UE heb gytundeb."
+    page_intro: |
+      <p>A Brexit deal has been agreed in principle with the EU.</p>
+      <p>Both the UK and the EU need to approve and sign the withdrawal agreement. They will then start to negotiate new arrangements. There would be a transition period to prepare for new rules.</p>
+      <p>The UK could still leave with no deal if the withdrawal agreement is not approved by 31 January 2020, or at the end of a transition period.</p>
+      <p>Find out what you, your family, or your business should do to be prepared if the UK leaves the EU with no deal.</p>
+      <p><a href="/get-ready-brexit-check">Check how to prepare for a no deal Brexit</a></p>
     chevron_banner: "Gwiriwch beth sydd angen i chi wneud os nad oes cytundeb"
     finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
     call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
