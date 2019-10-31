@@ -115,14 +115,17 @@ en:
       uk_nationals_in_eu_preparations: "Living in Europe after Brexit"
       eu_citizens_in_uk_preparations: "Continue to live in the UK after Brexit"
   brexit_landing_page:
-    meta_title: "Get ready for Brexit"
-    meta_description: "A Brexit deal has been agreed in principle with the EU. Find out what this means for you."
+    meta_title: "Brexit"
+    meta_description: "Brexit information and guidance on how to prepare for a no deal Brexit."
     chevron_banner: "Check what you need to do if there is no deal"
     finder_heading: "Browse all information related to Brexit:"
-    page_title: "Get ready for Brexit"
-    page_lead: "A Brexit deal has been agreed in principle with the EU."
-    page_paragraph: "Both the UK and the EU need to approve and sign the withdrawal agreement."
-    page_warning: "If the withdrawal agreement is not signed by the UK and the EU, the UK could still leave with no deal. Find out what you, your family, or your business need to do if the UK leaves the EU with no deal."
+    page_title: "Brexit"
+    page_intro: |
+      <p>A Brexit deal has been agreed in principle with the EU.</p>
+      <p>Both the UK and the EU need to approve and sign the withdrawal agreement. They will then start to negotiate new arrangements. There would be a transition period to prepare for new rules.</p>
+      <p>The UK could still leave with no deal if the withdrawal agreement is not approved by 31 January 2020, or at the end of a transition period.</p>
+      <p>Find out what you, your family, or your business should do to be prepared if the UK leaves the EU with no deal.</p>
+      <p><a href="/get-ready-brexit-check">Check how to prepare for a no deal Brexit</a></p>
     call_to_action_intro: "Answer a few questions to find out how you or your business should prepare."
     all_brexit_information: "All Brexit information"
     email_intro: "Stay up to date"
