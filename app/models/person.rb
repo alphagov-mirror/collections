@@ -22,9 +22,18 @@ class Person
     @content_item.content_item_data["title"]
   end
 
-  def roles
-    links["ordered_current_appointments"].map { |ra| ra["links"]["role"] }.map do |role|
-      role.map { |r| r["title"] }.join(",")
+  def current_roles
+    appointments = links["ordered_current_appointments"]
+    return unless appointments
+
+    if appointments.include?(%w[links])
+      roles = appointments.map { |ra| ra["links"]["role"] }.map do |role|
+        role.map { |r| r["title"] }.join(",")
+      end
+
+      roles.to_sentence
+    else
+      appointments.map { |ra| ra["title"] }.map { |t| t.split(" - ").last }.to_sentence
     end
   end
 
