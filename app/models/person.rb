@@ -23,7 +23,9 @@ class Person
   end
 
   def roles
-    links["ordered_current_appointments"].map { |ra| ra["title"] }.to_sentence
+    links["ordered_current_appointments"].map { |ra| ra["links"]["role"] }.map do |role|
+      role.map { |r| r["title"] }.join(",")
+    end
   end
 
   def image_url
