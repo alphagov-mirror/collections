@@ -1,0 +1,24 @@
+<section id="current-roles">
+  <% person.ordered_current_appointments.each do |appointment| %>
+    <% role = appointment["links"]["role"][0] %>
+    <section class="role_appointment role govuk-!-padding-bottom-8">
+    <%= render "govuk_publishing_components/components/heading", {
+        text: role["title"],
+        id: role["title"].parameterize,
+        margin_bottom: 2,
+    } %>
+    <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+      <%= role["details"]["body"].html_safe %>
+    <% end  %>
+
+    <% if role["document_type"] == "ministerial_role" %>
+      <p class="govuk-body-s"><a href=<%= role["base_path"] %>>More about this role</a></p>
+    <% end %>
+
+    <% parent_organisations = [] %>
+    <% role["links"]["ordered_parent_organisations"].map { | parent | parent_organisations << link_to(parent["title"], parent["base_path"]) }%>
+    <%= parent_organisations.to_sentence.html_safe %>
+    </section>
+  <% end %>
+</section>

@@ -56,6 +56,10 @@ class Person
     details["body"]
   end
 
+  def ordered_current_appointments
+    links["ordered_current_appointments"]
+  end
+
 private
 
   def current_roles
