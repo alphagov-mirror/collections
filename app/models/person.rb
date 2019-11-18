@@ -56,7 +56,40 @@ class Person
     details["body"]
   end
 
+  def announcement_items
+    announcements.map do |annoucenment|
+      {
+        link: {
+          text: annoucenment["title"],
+          path: annoucenment["link"],
+        },
+        metadata: {
+          public_timestamp: Date.parse(annoucenment["public_timestamp"]).strftime("%d %B %Y"),
+          content_store_document_type: annoucenment["content_store_document_type"].humanize,
+        },
+      }
+    end
+  end
+
+  def has_announcements?
+    announcements.present?
+  end
+
 private
+
+  def announcements
+    @announcements ||= Services.cached_search(
+      count: 10,
+      order: "-public_timestamp",
+      filter_people: slug,
+      reject_content_purpose_supergroup: "other",
+      fields: %w[title link content_store_document_type public_timestamp],
+      )["results"]
+  end
+
+  def slug
+    base_path.split("/").last
+  end
 
   def current_roles
     links.fetch("ordered_current_appointments", [])
