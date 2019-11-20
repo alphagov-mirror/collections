@@ -87,6 +87,10 @@ class Person
     "https://www.gov.uk/government/people/#{slug}.atom"
   end
 
+  def ordered_current_appointments
+    links["ordered_current_appointments"]
+  end
+
 private
 
   def slug
