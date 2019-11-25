@@ -87,6 +87,10 @@ class Person
     "https://www.gov.uk/government/people/#{slug}.atom"
   end
 
+  def currently_in_a_role?
+    current_role_appointments.any?
+  end
+
 private
 
   def slug
