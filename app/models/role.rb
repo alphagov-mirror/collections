@@ -30,6 +30,14 @@ class Role
     links["ordered_parent_organisations"]
   end
 
+  def current_holder
+    links["role_appointments"]
+      .select { |ra| ra.dig("details", "current") == true }
+      .first
+      .dig("links", "person")
+      .first
+  end
+
 private
 
   def content_item_data
