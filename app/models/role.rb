@@ -30,6 +30,12 @@ class Role
     links["ordered_parent_organisations"]
   end
 
+  def currently_occupied?
+    links
+      .fetch("role_appointments", [])
+      .find { |ra| ra.dig("details", "current") }.any?
+  end
+
   def current_holder
     links
       .fetch("role_appointments", [])
