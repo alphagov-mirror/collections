@@ -1,23 +1,24 @@
 <% content_for :title, role.title %>
+<div dir="<%= page_text_direction %>">
+  <%= render partial: "header", locals: { role: role } %>
 
-<%= render partial: "header", locals: { role: role } %>
+  <%= render partial: "organisations", locals: { role: role } %>
 
-<%= render partial: "organisations", locals: { role: role } %>
+  <%= render partial: "current_holder", locals: { role: role } %>
 
-<%= render partial: "current_holder", locals: { role: role } %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "Responsibilities",
+        id: "responsibilities",
+      } %>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: "Responsibilities",
-      id: "responsibilities",
-    } %>
+      <%= render "govuk_publishing_components/components/govspeak", {
+      } do %>
+        <%= role.responsibilities.html_safe %>
+      <% end %>
 
-    <%= render "govuk_publishing_components/components/govspeak", {
-    } do %>
-      <%= role.responsibilities.html_safe %>
-    <% end %>
-
-    <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
+      <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
+    </div>
   </div>
 </div>
