@@ -1,5 +1,5 @@
 <% if role.current_holder %>
-  <div <%= t_direction %> lang="<%= role.locale %>">
+  <div class="<%= t_direction_class %>" <%= t_direction %> lang="<%= role.locale %>">
     <%= t("roles.headings.current_holder") %>:
     <%= link_to role.current_holder["title"], role.current_holder["base_path"] %>
   </div>
