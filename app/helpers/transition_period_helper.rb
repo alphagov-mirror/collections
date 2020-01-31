@@ -1,5 +1,5 @@
 module TransitionPeriodHelper
-  SWITCHOVER_TIME = Time.zone.parse("2020-01-31 23:00:00").in_time_zone
+  SWITCHOVER_TIME = Time.zone.parse("2020-01-31 22:00:00").in_time_zone
 
   def time_based_intl
     if before_switchover_and_not_overridden?
