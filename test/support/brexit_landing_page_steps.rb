@@ -31,12 +31,12 @@ module BrexitLandingPageSteps
   end
 
   def when_i_visit_the_brexit_landing_page_with_dynamic_list
-    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
+    TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
     visit brexit_taxon_path
   end
 
   def when_i_visit_the_brexit_landing_page_without_dynamic_list
-    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
+    TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
     visit brexit_taxon_path
   end
 
