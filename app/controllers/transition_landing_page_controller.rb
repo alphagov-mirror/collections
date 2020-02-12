@@ -22,7 +22,7 @@ private
   end
 
   def presented_taxon
-    BrexitLandingPagePresenter.new(taxon)
+    TransitionLandingPagePresenter.new(taxon)
   end
 
   def presentable_section_items
