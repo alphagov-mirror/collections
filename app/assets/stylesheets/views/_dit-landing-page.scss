@@ -1,6 +1,10 @@
 $dark-red: #C21D26;
 $dark-grey: #282828;
 
+.dit-landing-page__kbm-logo {
+  max-height: 100px;
+}
+
 .dit-landing-page__header {
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(3);
@@ -83,4 +87,8 @@ $dark-grey: #282828;
   p {
     color: govuk-colour("white");
   }
+}
+
+.dit-landing-page__training-image {
+  max-width: 100%;
 }
