@@ -12,7 +12,7 @@
         <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
           <%= t("dit_landing_page.take_action_text").html_safe %>
-          <ul class="govuk-list govuk-bulleted_list">
+          <ul class="govuk-list govuk-list">
             <% t("dit_landing_page.countries").each do |country| %>
               <li><%= link_to country[:label], country[:url]  %></li>
             <% end %>

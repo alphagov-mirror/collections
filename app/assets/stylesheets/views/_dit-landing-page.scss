@@ -1,4 +1,5 @@
 $dark-red: #C21D26;
+$red: #FF003B;
 $dark-grey: #282828;
 
 .dit-landing-page__kbm-logo {
@@ -17,7 +18,8 @@ $dark-grey: #282828;
   padding-bottom: govuk-spacing(4);
   padding-top: govuk-spacing(3);
   background-color: $dark-red;
-  border-top: govuk-spacing(2) solid $dark-red;
+  border-top: govuk-spacing(2) solid $red;
+  border-bottom: govuk-spacing(2) solid $red;
 
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: govuk-spacing(4);
@@ -45,9 +47,7 @@ $dark-grey: #282828;
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: 80px;
     padding-top: govuk-spacing(5);
-
     background: $red;
-    background: -moz-linear-gradient(90deg, $dark-red 66.66%, $transparent 66.66%);
     background: -webkit-linear-gradient(90deg, $dark-red 66.66%, $transparent 66.66%);
     background: linear-gradient(90deg, $dark-red 66.66%, $transparent 66.66%);
   }
