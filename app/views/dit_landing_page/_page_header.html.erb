@@ -23,8 +23,11 @@
           </h1>
         </div>
         <div class="govuk-grid-column-two-thirds dit-landing-page__intro">
-          <p class="govuk-body-l"><%= t("dit_landing_page.page_header_explainer") %></p>
-        </div>
+          <%= render "govuk_publishing_components/components/govspeak", {
+          } do %>
+            <%= t("dit_landing_page.page_header_explainer").html_safe %>
+          <% end %>
+          </div>
       </div>
     </div>
   </div>
