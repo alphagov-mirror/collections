@@ -1,4 +1,5 @@
 $dark-blue-2: #003078;
+$desktop-breakpoint-override: 1000px;
 
 .Transition-countdown {
   border: govuk-spacing(1) solid $dark-blue-2;
@@ -8,9 +9,11 @@ $dark-blue-2: #003078;
     padding: govuk-spacing(3);
     color: $dark-blue-2;
     text-align: center;
+    width: 100%;
 
-    @include govuk-media-query($from: tablet) {
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
       padding: govuk-spacing(4);
+      width: 50%;
     }
   }
 
@@ -20,6 +23,11 @@ $dark-blue-2: #003078;
     vertical-align: middle;
 
     @include govuk-media-query($from: tablet) {
+      @include govuk-font(48, $weight: bold);
+    }
+
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
+      @include govuk-font(80, $weight: bold);
       display: block;
     }
   }
@@ -30,7 +38,7 @@ $dark-blue-2: #003078;
     vertical-align: middle;
     margin: 0 0 govuk-spacing(1) govuk-spacing(1);
 
-    @include govuk-media-query($from: tablet) {
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
       @include govuk-font(19);
       display: block;
       margin: 0;
@@ -40,10 +48,11 @@ $dark-blue-2: #003078;
   .Transition-countdown__traffic-lights {
     background-color: $dark-blue-2;
     padding: govuk-spacing(3) govuk-spacing(2) govuk-spacing(2);
-    height: auto;
+    width: 100%;
 
-    @include govuk-media-query($from: tablet) {
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
       padding: govuk-spacing(2) govuk-spacing(3);
+      width: 50%;
     }
 
     .landing-page__take-action-traffic-lights {
