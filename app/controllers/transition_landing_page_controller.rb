@@ -39,7 +39,7 @@ private
   end
 
   def show_countdown?
-    true
+    false
   end
 
   def switch_locale(&action)
