@@ -20,6 +20,7 @@ group :test do
   gem "govuk-content-schema-test-helpers"
   gem "govuk_schemas"
   gem "minitest-spec-rails"
+  gem "minitest-stub-const"
   gem "mocha"
   gem "rails-controller-testing"
   gem "simplecov"
