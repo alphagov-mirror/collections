@@ -202,7 +202,7 @@ $green: #00703C;
 }
 
 .landing-page__section--border-top {
-  border-top: govuk-spacing(2) solid govuk-colour('black');
+  border-top: govuk-spacing(2) solid $dark-blue-2;
 }
 
 .landing-page__section--border-bottom-red {
