@@ -1,3 +1,14 @@
+PATH
+  remote: ../govuk_publishing_components
+  specs:
+    govuk_publishing_components (23.5.1)
+      govuk_app_config
+      kramdown
+      plek
+      rails (>= 5.0.0.1)
+      rouge
+      sprockets (< 4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -159,13 +170,6 @@ GEM
       statsd-ruby (~> 1.4.0)
       unicorn (>= 5.4, < 5.8)
     govuk_document_types (0.9.2)
-    govuk_publishing_components (23.6.0)
-      govuk_app_config
-      kramdown
-      plek
-      rails (>= 5.0.0.1)
-      rouge
-      sprockets (< 4)
     govuk_schemas (4.1.1)
       json-schema (~> 2.8.0)
     govuk_test (2.0.0)
@@ -414,7 +418,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   jasmine
