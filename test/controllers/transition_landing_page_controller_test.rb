@@ -64,7 +64,7 @@ describe TransitionLandingPageController do
         it "Variant B shows the alternate button text" do
           with_variant BrexitChecker: "B" do
             get :show
-            assert_select ".govuk-button", text: "Brexit checker: start now"
+            assert_select ".govuk-button", text: "Brexit Checker: start now"
           end
         end
       end
