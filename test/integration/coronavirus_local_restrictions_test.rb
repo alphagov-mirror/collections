@@ -132,7 +132,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays restrictions changing from level two to level three" do
@@ -140,7 +139,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays restrictions changing from level three to level four" do
@@ -148,7 +146,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
-      then_i_do_not_see_details_of_christmas_rules
     end
   end
 
