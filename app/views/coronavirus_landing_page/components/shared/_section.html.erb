@@ -24,11 +24,11 @@
             </p>
           <% end %>
         <% else %>
-          <%= link_to(
-            item["label"],
-            item["url"],
-            class: "govuk-link covid__accordion-link"
-          ) %>
+          <%= render "govuk_publishing_components/components/list", {
+            items: [
+              sanitize("<a href=\"#{item["url"]}\" rel=\"noopener\" class=\"govuk-link\">#{item["label"]}</a>"),
+              ]
+          } %>
         <% end %>
       </li>
     <% end %>
